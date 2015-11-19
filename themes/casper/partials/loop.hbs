@@ -1,0 +1,22 @@
+<div class="grid">
+  <div class="grid-sizer"></div>
+  {{#foreach posts}}
+    <article class="{{post_class}}">
+      <div class="grid-item">
+        <a href="{{url}}">
+          <div class="caption">{{{title}}} &nbsp
+            <footer class="post-meta">
+              {{tags prefix=" on "}}
+              <time class="post-date">{{date published_at timeago="true"}}</time>
+            </footer>
+          </div>
+
+      {{#if image}}
+    <img src="{{image}}" />
+    {{else}}
+    <img src="{{asset "images/empty.png"}}" alt="thumbnail" style="height: 200px;" />
+    {{/if}}
+    </a>
+      </div>
+  {{/foreach}}
+</div>

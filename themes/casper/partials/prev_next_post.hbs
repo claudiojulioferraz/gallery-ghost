@@ -1,0 +1,24 @@
+<aside class="prev-next">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+      {{#next_post}}
+        <a class="read-next-prev {{#if image}}" href="{{url}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
+          <section class="post">
+            <h3>{{title}}</h3>
+          </section>
+        </a>
+      {{/next_post}}
+    </div>
+    <div class="col-md-6">
+
+      {{#prev_post}}
+        <a class="read-next-prev {{#if image}}" href="{{url}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
+          <section class="post">
+            <h3>{{title}}</h3>
+          </section>
+        </a>
+      {{/prev_post}}
+      <div></div>
+    </div>
+  </aside>
